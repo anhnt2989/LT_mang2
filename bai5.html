@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<style>
+    .nd {
+        text-align: center;
+    }
+    p {
+        font-size: x-large;
+    }
+</style>
+<div class="nd">
+<p>Nhập vào chuỗi 1</p>
+<label for="inp1"></label><textarea name="" id="inp1" cols="30" rows="1"></textarea>
+<p>Nhập vào chuỗi 2</p>
+<label for="inp2"></label><textarea name="" id="inp2" cols="30" rows="1"></textarea>
+<br><br><br>
+<input type="button" value="Check" onclick="Check();">
+<p id="kq"></p>
+</div>
+<body>
+            <script>
+               let x = (document.getElementById("inp1").value).split("");
+               // console.log(x);
+               let y = (document.getElementById("inp2").value).split("");
+               // console.log(y);
+               function Check() {
+                   for (let i in x) {
+                       for (let j in y) {
+                           if (x[i] === y[j]) {
+                               document.getElementById("kq").innerHTML = "Chuỗi 1 = Chuỗi 2";
+                           } else {
+                               document.getElementById("kq").innerHTML = "Chuỗi 1 != Chuỗi 2";
+                           }
+                       }
+                   }
+               }
+            </script>
+</body>
+</html>

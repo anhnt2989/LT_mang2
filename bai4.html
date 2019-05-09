@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+
+</head>
+<style>
+    p {
+        font-size: x-large;
+
+    }
+    .nd {
+        text-align: center;
+    }
+</style>
+<div class="nd">
+    <p>Nhập vào 1 Array gồm các ký tự bất kỳ</p>
+    (Chú ý : các phần tử được ngăn cách bởi dấu ",")<br>
+    <label for="inp"></label><textarea name="" id="inp" cols="30" rows="3"></textarea>
+    <p id="kq"></p>
+</div>
+<body>
+<script>
+    let x = (document.getElementById("inp").value).split(",");
+    let count=0;
+    for (let i=0;i<10;i++) {
+        if (isNaN(x[i]) === true ) {
+            count++;
+        }
+    }
+    document.getElementById("kq").innerHTML = "Số từ trong mảng là : " + count;
+</script>
+</body>
+</html>

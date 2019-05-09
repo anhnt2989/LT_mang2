@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<style>
+    .nd {
+        text-align: center;
+    }
+</style>
+
+<div class="nd">
+<h1>Nhập vào mảng</h1>
+    (Chú ý : các phần tử được ngăn cách nhau bằng dấu ",")<br>
+<label for="inp"></label><textarea name="" id="inp" cols="30" rows="3"></textarea>
+<br><br><br>
+<input type="button" value="Convert" onclick="thaythe();"/>
+<br><br>
+<p id="kq"></p>
+</div>
+
+<body>
+            <script>
+                let x = (document.getElementById("inp").value).split(",");
+                console.log(x);
+                function thaythe() {
+                    // let nA = x.toString().replace("-","_");
+                    for (let i=0;i<x.length;i++) {
+                        if (x[i] == "-") {
+                            x[i] = "_";
+                        }
+                    }
+                    document.getElementById("kq").innerHTML = "Mảng mới của bạn là : [" + x.join() + "]";
+                    // document.getElementById("kq").innerHTML = "Mảng mới của bạn là : [" + nA + "]";
+                }
+            </script>
+</body>
+</html>

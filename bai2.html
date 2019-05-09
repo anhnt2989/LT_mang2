@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<p>Nhập vào 1 mảng gồm các KÝ TỰ </p>
+<label for="inp"></label><textarea name="" id="inp" cols="30" rows="3"></textarea>
+<br><br><br>
+<input type="button" value="Reverse" onclick="daonguoc();"/>
+<br><br><br>
+<label for="kq"></label><textarea name="" id="kq" cols="30" rows="3" readonly></textarea>
+
+<body>
+            <script>
+                let ax = (document.getElementById("inp").value).split(",");
+                // console.log(ax);
+                function daonguoc() {
+                    let x = ax.reverse();
+                    // console.log(x)
+                    let y = x.join("");
+                    // console.log(y);
+                    document.getElementById("kq").innerHTML = y;
+                }
+            </script>
+</body>
+</html>
